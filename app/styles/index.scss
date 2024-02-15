@@ -56,6 +56,7 @@ h1, h2, h3, h4, h5, h6, p{
 body{
     font-family: Hack, monospace;
     font-weight: 700;
+    background-color: $secondary;
     margin: 0;
     padding: 0;
 }
@@ -127,7 +128,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #000000;
+    background-color: $secondary;
     background-image: url("../../public/images/bg-ruler.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -137,20 +138,20 @@ body{
     width: 100%;
     max-width: 830px;
     margin: 0 auto;
-    border: 1px solid rgba(252, 161, 4, 1);
+    border: 1px solid $primary;
     .box-header{
         display: flex;
         align-items: stretch;
         justify-content: space-between;
         background-color: $dark-950;
         padding: 10px;
-        border-bottom: 1px solid rgba(252, 161, 4, 1);
+        border-bottom: 1px solid $primary;
         .title{
             display: flex;
             align-items: center;
             column-gap: 8px;
             font-family: "Roboto Mono";
-            font-size: 18px;
+            font-size: $fs-18;
             color: $white;
             line-height: 1.2;
             .icon{
@@ -166,8 +167,8 @@ body{
             padding: 4px 10px 4px 35px;
             background-color: transparent;
             font-family: Hack, monospace;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: $fs-16;
+            font-weight: $fw-600;
             color: $white;
             border: 1px solid #634002;
             outline: 0;
@@ -178,12 +179,12 @@ body{
             background-size: 16px;
             &::-ms-input-placeholder {
                 font-family: Hack, monospace;
-                font-weight: 700;
+                font-weight: $fw-700;
                 color: $white-24;
             } 
             &::placeholder {
                 font-family: Hack, monospace;
-                font-weight: 700;
+                font-weight: $fw-700;
                 color: $white-24;
             }
         }
