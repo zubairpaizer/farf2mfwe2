@@ -57,6 +57,10 @@ body{
     font-family: Hack, monospace;
     font-weight: 700;
     background-color: $secondary;
+    background-image: url("../../public/images/bg-ruler.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -128,11 +132,6 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: $secondary;
-    background-image: url("../../public/images/bg-ruler.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }
 .box{
     width: 100%;
