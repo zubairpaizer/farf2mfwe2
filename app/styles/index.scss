@@ -510,3 +510,18 @@ body{
 	flex-direction: column;
 	row-gap: 6px;
 }
+
+.btn-edit{
+	display: flex;
+	align-items: center;
+	column-gap: 4px;
+	margin-left: 16px;
+	cursor: pointer;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	.icon{
+		width: 16px;
+	}
+}

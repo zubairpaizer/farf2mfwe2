@@ -1,5 +1,5 @@
 'use client'
-import rightArrow from "../../public/images/icons/icon-right-arrow.svg";
+import editIcon from "../../public/images/icons/icon-edit.svg";
 import { useState } from "react";
 
 const PoolTabs = [
@@ -47,7 +47,13 @@ export const PoolTabsCard = (props) => {
                 <div className="full-bars">
                   <div className="bar bg-900">
                     <span>Slippage</span>
-                    <span>04% EDIT</span>
+                    <div className="d-flex items-center">
+                      <span>04%</span>
+                      <div className="btn-edit">
+                        <img className="icon" src={editIcon.src} alt="" />
+                        <span>EDIT</span>
+                      </div>
+                    </div>
                   </div>
                   <div className="bar bg-900">
                     <span>LP Token Output</span>
@@ -82,9 +88,6 @@ export const PoolTabsCard = (props) => {
                     <span>xUSD Fees Earned</span>
                     <span>12.34</span>
                   </div>
-                </div>
-                <div className="full-white-bar">
-                  <span>No positions found. Start by adding liquidity.</span>
                 </div>
                 <div className="text-end">
                   <div class="btn-default d-inline-flex">Remove liquidity</div> 
