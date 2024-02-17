@@ -319,7 +319,7 @@ body{
 		}
 	}
 	.news{
-		height: 30px;
+		min-height: 30px;
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
