@@ -61,7 +61,7 @@ export default function Farm() {
                 <span>Reward Balance</span>
               </div>  
               <div class="dark-block block-lg">
-                <span>100,000 Velar/day</span>
+                <span>100,000 Sushi/day</span>
               </div> 
             </div>
             <div className="item">

@@ -23,21 +23,21 @@ export const FarmTabsCard = (props) => {
               <div className="tab-pane">
                 <div>
                   <from>
-                    <input class="field" placeholder="Enter VelarX Amount" type="text" />
+                    <input class="field" placeholder="Enter Sushi Amount" type="text" />
                   </from>
                   <div className="balance-bar">
                     <p className="balance">
-                      Balance: <span>123.456 Velar <span>•</span></span>
+                      Balance: <span>123.456 Sushi <span>•</span></span>
                     </p>
                     <div className="use-max">USE MAX</div>
                   </div>
                 </div>
                 <div className="full-white-bar">
                   <span>You will receive</span>
-                  <span>120 VelarX</span>
+                  <span>120 Sushi</span>
                 </div>
                 <div className="text-end">
-                  <div class="btn-default d-inline-flex">Stake Velar</div> 
+                  <div class="btn-default d-inline-flex">Stake Sushi</div> 
                 </div>
                 <div className="full-bars">
                   <div className="bar bg-800">
@@ -57,21 +57,21 @@ export const FarmTabsCard = (props) => {
               <div className="tab-pane">
                 <div>
                   <from>
-                    <input class="field" placeholder="Enter VelarX Amount" type="text" />
+                    <input class="field" placeholder="Enter Sushi Amount" type="text" />
                   </from>
                   <div className="balance-bar">
                     <p className="balance">
-                      Balance: <span>556.456 Velar <span>•</span></span>
+                      Balance: <span>556.456 Sushi <span>•</span></span>
                     </p>
                     <div className="use-max">USE MAX</div>
                   </div>
                 </div>
                 <div className="full-white-bar">
                   <span>You will receive</span>
-                  <span>860 VelarX</span>
+                  <span>860 Sushi</span>
                 </div>
                 <div className="text-end">
-                  <div class="btn-default d-inline-flex">Unstake Velar</div> 
+                  <div class="btn-default d-inline-flex">Unstake Sushi</div> 
                 </div>
                 <div className="full-bars">
                   <div className="bar bg-800">
