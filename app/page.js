@@ -1,3 +1,4 @@
+'use client'
 import mainHeaderIcon from "../public/images/icons/icon-fruit.svg";
 import walletLeather from "../public/images/icons/icon-leather-wallet.png";
 import walletXverse from "../public/images/icons/icon-xverse-wallet.png";
@@ -5,8 +6,11 @@ import walletAsigna from "../public/images/icons/icon-asigna-wallet.png";
 import dangerWarm from "../public/images/warm-success.png";
 import successWarm from "../public/images/warm-danger.png";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [ showWallet, setShowWallet ] = useState(false);
+
   return (
     <main className="main">
       <article className="box">
@@ -15,7 +19,7 @@ export default function Home() {
             <img className="icon" src={mainHeaderIcon.src} alt="" />
             <span>Food Farm</span>
           </div>
-          <div className="btn-default btn-lg">Connect Wallet</div>
+          <div onClick={() => setShowWallet(!showWallet)} className="btn-default btn-lg">Connect Wallet</div>
         </div>
         <div className="box-body">
           <from>
@@ -365,26 +369,26 @@ export default function Home() {
         </div>
       </article>
 
-      <div class="modal modal-sm show modal-connect-wallet">
+      <div className={(showWallet ? 'show ' : '') + "modal modal-sm modal-connect-wallet"}>
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Connect Wallet</h5>
-              <button type="button" class="btn-close">
+              <button onClick={() => setShowWallet(!showWallet)} type="button" class="btn-close">
                 X
               </button>
             </div>
             <div class="modal-body">
               <div className="wallet-list">
-                <div className="item">
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
                   <img className="icon" src={walletLeather.src} alt="" />
                   <span>Leather Wallet</span>
                 </div>
-                <div className="item">
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
                   <img className="icon" src={walletXverse.src} alt="" />
                   <span>Xverse</span>
                 </div>
-                <div className="item">
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
                   <img className="icon" src={walletAsigna.src} alt="" />
                   <span>Asigna</span>
                 </div>
@@ -394,7 +398,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="modal-backdrop"></div>
+      <div className={(showWallet ? 'show ' : '') + "modal-backdrop"}></div>
 
     </main>
   );

@@ -2,6 +2,7 @@
 import rightArrow from "../../public/images/icons/icon-right-arrow.svg";
 import dropdownIcon from "../../public/images/icons/icon-dd.svg";
 import { useState } from "react";
+import { Dropdown } from "./Dropdown";
 
 const FarmTabs = [
     { name: 'Stack', value: 'stack' },
@@ -11,6 +12,17 @@ const FarmTabs = [
 
 export const FarmTabsCard = (props) => {
     const [settings, setSettings] = useState({ tab: 'stack' });
+    const [ selected, setSelected ] = useState({ name: 'Select an Epoch', value: '' });
+    const options  = [
+      { name: 'Epoch #12343', value: '1232' },
+      { name: 'Epoch #12313', value: '1221' },
+      { name: 'Epoch #12342', value: '1235' },
+      { name: 'Epoch #12353', value: '1237' },
+      { name: 'Epoch #52353', value: '2237' },
+      { name: 'Epoch #22353', value: '4237' },
+      { name: 'Epoch #22313', value: '5237' },
+      { name: 'Epoch #42352', value: '6237' },
+    ];
 
     return (
       <>
@@ -94,23 +106,7 @@ export const FarmTabsCard = (props) => {
                   <h4 className="key">My Rewards</h4>
                   <h6 className="value">$0.00</h6>
                 </div>
-                <div className="select-dropdown opened">
-                  <div className="clickable">
-                    <span>Select an Epoch</span>
-                    <img className="icon" src={dropdownIcon.src} alt="" />
-                  </div>
-                  <div className="dropable">
-                    <div className="item">
-                      <span>Epoch #12897</span>
-                    </div>
-                    <div className="item selected">
-                      <span>Epoch #14897</span>
-                    </div>
-                    <div className="item">
-                      <span>Epoch #16897</span>
-                    </div>
-                  </div>
-                </div>
+                <Dropdown options={options} selected={selected} onSelect={(val) => setSelected(val)} />
                 <div className="full-bars">
                   <div className="bar bg-900">
                     <span>Reward Share %</span>
