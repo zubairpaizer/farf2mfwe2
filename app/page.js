@@ -1,4 +1,7 @@
 import mainHeaderIcon from "../public/images/icons/icon-fruit.svg";
+import walletLeather from "../public/images/icons/icon-leather-wallet.png";
+import walletXverse from "../public/images/icons/icon-xverse-wallet.png";
+import walletAsigna from "../public/images/icons/icon-asigna-wallet.png";
 import dangerWarm from "../public/images/warm-success.png";
 import successWarm from "../public/images/warm-danger.png";
 import Link from "next/link";
@@ -10,7 +13,7 @@ export default function Home() {
         <div className="box-header">
           <div className="title">
             <img className="icon" src={mainHeaderIcon.src} alt="" />
-           <span>Food Farm</span>
+            <span>Food Farm</span>
           </div>
           <div className="btn-default btn-lg">Connect Wallet</div>
         </div>
@@ -361,6 +364,38 @@ export default function Home() {
           </div>
         </div>
       </article>
+
+      <div class="modal modal-sm show modal-connect-wallet">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Connect Wallet</h5>
+              <button type="button" class="btn-close">
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <div className="wallet-list">
+                <div className="item">
+                  <img className="icon" src={walletLeather.src} alt="" />
+                  <span>Leather Wallet</span>
+                </div>
+                <div className="item">
+                  <img className="icon" src={walletXverse.src} alt="" />
+                  <span>Xverse</span>
+                </div>
+                <div className="item">
+                  <img className="icon" src={walletAsigna.src} alt="" />
+                  <span>Asigna</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="modal-backdrop"></div>
+
     </main>
   );
 }

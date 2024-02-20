@@ -1,4 +1,7 @@
 import mainHeaderIcon from "../../public/images/icons/icon-fruit.svg";
+import walletLeather from "../../public/images/icons/icon-leather-wallet.png";
+import walletXverse from "../../public/images/icons/icon-xverse-wallet.png";
+import walletAsigna from "../../public/images/icons/icon-asigna-wallet.png";
 import innerChart from "../../public/images/inner-chart.png";
 import { FarmTabsCard } from "../components/FarmTabsCard";
 

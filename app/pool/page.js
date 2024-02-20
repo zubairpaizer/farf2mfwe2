@@ -1,4 +1,8 @@
 import mainHeaderIcon from "../../public/images/icons/icon-fruit.svg";
+import dropdownIcon from "../../public/images/icons/icon-dd.svg";
+import walletLeather from "../../public/images/icons/icon-leather-wallet.png";
+import walletXverse from "../../public/images/icons/icon-xverse-wallet.png";
+import walletAsigna from "../../public/images/icons/icon-asigna-wallet.png";
 import innerChart from "../../public/images/inner-chart.png";
 import { PoolTabsCard } from "../components/PoolTabsCard";
 
@@ -30,13 +34,23 @@ export default function Farm() {
             </div>
             <div className="ct-card-body">
               <div className="w-40 chart-with-dropdown">
-                <from>
-                  <select className="select-field">
-                    <option>Total Volume Locked</option>
-                    <option>Total Volume Locked</option>
-                    <option>Total Volume Locked</option>
-                  </select>
-                </from>
+                <div className="select-dropdown opened">
+                  <div className="clickable">
+                    <span>Total Volume Locked</span>
+                    <img className="icon" src={dropdownIcon.src} alt="" />
+                  </div>
+                  <div className="dropable">
+                    <div className="item">
+                      <span>Price change</span>
+                    </div>
+                    <div className="item">
+                      <span>Volume</span>
+                    </div>
+                    <div className="item selected">
+                      <span>Total Volume Locked</span>
+                    </div>
+                  </div>
+                </div>
                 <div className="ct-inner-card flex-1">
                   <div className="inner-tabs-header">
                     <div className="tab-item justify-center">1d</div>

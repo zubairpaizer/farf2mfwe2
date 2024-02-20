@@ -1,5 +1,6 @@
 'use client'
 import rightArrow from "../../public/images/icons/icon-right-arrow.svg";
+import dropdownIcon from "../../public/images/icons/icon-dd.svg";
 import { useState } from "react";
 
 const FarmTabs = [
@@ -93,13 +94,23 @@ export const FarmTabsCard = (props) => {
                   <h4 className="key">My Rewards</h4>
                   <h6 className="value">$0.00</h6>
                 </div>
-                <from>
-                  <select className="select-field">
-                    <option>Select an Epoch</option>
-                    <option>Epoch #12897</option>
-                    <option>Epoch #14567</option>
-                  </select>
-                </from>
+                <div className="select-dropdown opened">
+                  <div className="clickable">
+                    <span>Select an Epoch</span>
+                    <img className="icon" src={dropdownIcon.src} alt="" />
+                  </div>
+                  <div className="dropable">
+                    <div className="item">
+                      <span>Epoch #12897</span>
+                    </div>
+                    <div className="item selected">
+                      <span>Epoch #14897</span>
+                    </div>
+                    <div className="item">
+                      <span>Epoch #16897</span>
+                    </div>
+                  </div>
+                </div>
                 <div className="full-bars">
                   <div className="bar bg-900">
                     <span>Reward Share %</span>
