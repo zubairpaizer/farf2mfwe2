@@ -9,7 +9,8 @@ import { PoolTabsCard } from "../components/PoolTabsCard";
 import { Dropdown } from "@/components/Dropdown";
 import { useState } from "react";
 
-export default function Farm() {
+export default function Pool() {
+  const [ showWallet, setShowWallet ] = useState(false);
   const [ selected, setSelected ] = useState({ name: 'Total Volume Locked', value: 'tvl' });
   const options  = [
     { name: 'Total Volume Locked', value: 'tvl' },
@@ -25,7 +26,7 @@ export default function Farm() {
             <img className="icon" src={mainHeaderIcon.src} alt="" />
            <span>Pool</span>
           </div>
-          <div className="btn-default btn-lg">Connect Wallet</div>
+          <div onClick={() => setShowWallet(!showWallet)} className="btn-default btn-lg">Connect Wallet</div>
         </div>
         <div className="box-body">
           <div className="ct-card">
@@ -123,6 +124,38 @@ export default function Farm() {
           </div>
         </div>
       </article>
+
+      <div className={(showWallet ? 'show ' : '') + "modal modal-sm modal-connect-wallet"}>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Connect Wallet</h5>
+              <button onClick={() => setShowWallet(!showWallet)} type="button" class="btn-close">
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <div className="wallet-list">
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
+                  <img className="icon" src={walletLeather.src} alt="" />
+                  <span>Leather Wallet</span>
+                </div>
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
+                  <img className="icon" src={walletXverse.src} alt="" />
+                  <span>Xverse</span>
+                </div>
+                <div onClick={() => setShowWallet(!showWallet)} className="item">
+                  <img className="icon" src={walletAsigna.src} alt="" />
+                  <span>Asigna</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={(showWallet ? 'show ' : '') + "modal-backdrop"}></div>
+
     </main>
   );
 }
