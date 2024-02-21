@@ -22,9 +22,15 @@ export default function Home() {
           <div onClick={() => setShowWallet(!showWallet)} className="btn-default btn-lg">Connect Wallet</div>
         </div>
         <div className="box-body">
-          <from>
-            <input className="field searchbar" type="search" placeholder="Search Pools" />
-          </from>
+          <div className="search-suggestions opened">
+            <from>
+              <input className="field searchbar" type="search" placeholder="Search Pools" />
+            </from>
+            <div className="suggestions">
+              <div className="item">xUSD - STX</div>
+              <div className="item">xUSD - STX</div>
+            </div>
+          </div>
           <Link href={'/pool'} className="d-block decoration-none">
             <div className="table">
               <div className="table-header">

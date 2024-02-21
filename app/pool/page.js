@@ -1,5 +1,6 @@
 'use client'
 import mainHeaderIcon from "../../public/images/icons/icon-fruit.svg";
+import leftArrowIcon from "../../public/images/icons/icon-left-arrow.svg";
 import dropdownIcon from "../../public/images/icons/icon-dd.svg";
 import walletLeather from "../../public/images/icons/icon-leather-wallet.png";
 import walletXverse from "../../public/images/icons/icon-xverse-wallet.png";
@@ -8,6 +9,7 @@ import innerChart from "../../public/images/inner-chart.png";
 import { PoolTabsCard } from "../components/PoolTabsCard";
 import { Dropdown } from "@/components/Dropdown";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Pool() {
   const [ showWallet, setShowWallet ] = useState(false);
@@ -32,6 +34,9 @@ export default function Pool() {
           <div className="ct-card">
             <div className="ct-card-header">
               <div class="gold-block flex-1">
+                <Link href={'/'} className="btn-back">
+                  <img className="icon" src={leftArrowIcon.src} alt="" />
+                </Link>
                 <span>STX/xUSD</span>
               </div>
               <div class="gold-block">

@@ -1,11 +1,13 @@
 'use client'
 import mainHeaderIcon from "../../public/images/icons/icon-fruit.svg";
+import leftArrowIcon from "../../public/images/icons/icon-left-arrow.svg";
 import walletLeather from "../../public/images/icons/icon-leather-wallet.png";
 import walletXverse from "../../public/images/icons/icon-xverse-wallet.png";
 import walletAsigna from "../../public/images/icons/icon-asigna-wallet.png";
 import innerChart from "../../public/images/inner-chart.png";
 import { FarmTabsCard } from "../components/FarmTabsCard";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Farm() {
   const [ showWallet, setShowWallet ] = useState(false);
@@ -24,6 +26,9 @@ export default function Farm() {
           <div className="ct-card">
             <div className="ct-card-header">
               <div class="gold-block flex-1">
+                <Link href={'/'} className="btn-back">
+                  <img className="icon" src={leftArrowIcon.src} alt="" />
+                </Link>
                 <span>STX/xUSD</span>
               </div>
               <div class="gold-block">
