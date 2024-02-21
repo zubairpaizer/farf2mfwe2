@@ -375,7 +375,7 @@ export default function Home() {
         </div>
       </article>
 
-      <div className={(showWallet ? 'show ' : '') + "modal modal-sm modal-connect-wallet"}>
+      <div className={(showWallet ? 'show ' : '') + "modal modal-sm modal-connect-wallet"} onClick={() => setShowWallet(!showWallet)}>
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
