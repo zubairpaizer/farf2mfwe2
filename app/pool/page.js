@@ -72,7 +72,7 @@ export default function Pool() {
               </div>
             </div>
           </div>
-          <div className="basic-details">
+          <div className="basic-details pool-basic-details">
             <div className="item">
               <div class="gold-block">
                 <span>Liquidity</span>

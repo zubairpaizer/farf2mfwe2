@@ -17,6 +17,7 @@ $white-88: rgba(255, 255, 255, 0.88);
 $fs-10: 10px;
 $fs-12: 12px;
 $fs-14: 14px;
+$fs-15: 15px;
 $fs-16: 16px;
 $fs-18: 18px;
 $fs-20: 20px;
@@ -258,10 +259,13 @@ body{
 			position: relative;
 			height: 30px;
 			width: 100%;
-			padding: 4px 35px 4px 6px;
+			padding: 4px 40px 4px 6px;
 			background-color: $secondary;
 			font-size: $fs-16;
 			color: $white;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
 			border-top: 1px solid $primary;
 			border-left: 1px solid $primary;
 			border-right: 1px solid $primary;
@@ -393,6 +397,11 @@ body{
 			flex-direction: column;
 			overflow-x: hidden;
 		}
+		.sm-overflow-auto{
+			@media (max-width: 767.98px) {
+				overflow-x: auto;
+			}
+		}
 	}
 	.table-body{
 		display: flex;
@@ -465,19 +474,32 @@ body{
 
 .w-40{
 	width: calc(40% - 2px);
+	@media (max-width: 767.98px) {
+		width: 100%;
+	}
 }
 .w-60{
 	width: calc(60% - 2px);
+	@media (max-width: 767.98px) {
+		width: 100%;
+	}
 }
 
 .ct-card{
 	margin-bottom: 10px;
 	.ct-card-header{
 		display: flex;
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+		}
 	}
 	.ct-card-body{
 		display: flex;
 		column-gap: 4px;
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+			row-gap: 10px;
+		}
 		.ct-inner-card{
 			display: flex;
     	flex-direction: column;
@@ -541,21 +563,31 @@ body{
 	column-gap: 12px;
 	justify-content: flex-end;
 	margin-top: 5px;
+	@media (max-width: 767.98px) {
+		column-gap: 8px;
+	}
 	.balance{
 		font-size: $fs-16;
 		color: $white;
 		line-height: 1.2;
 		margin-bottom: 0;
+		@media (max-width: 767.98px) {
+			font-size: $fs-15;
+		}
 	}
 	.use-max{
 		font-size: $fs-16;
 		color: $primary;
 		line-height: 1.2;
+		white-space: nowrap;
 		cursor: pointer;
 		user-select: none;
 		-ms-user-select: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
+		@media (max-width: 767.98px) {
+			font-size: $fs-15;
+		}
 	}
 }
 
@@ -580,6 +612,60 @@ body{
 		width: 100%;
 	}
 }
+
+@media (max-width: 767.98px) {
+	.farm-basic-details{
+		flex-wrap: wrap;
+		row-gap: 10px;
+		.item{
+			&:nth-child(1){
+				width: calc(44% - 5px);
+				overflow-x: hidden;
+			}
+			&:nth-child(2){
+				width: calc(56% - 5px);
+				overflow-x: hidden;
+			}
+			&:nth-child(3){
+				width: 100%;
+				overflow-x: hidden;
+			}
+			&:nth-child(4){
+				width: calc(50% - 5px);
+				overflow-x: hidden;
+			}
+			&:nth-child(5){
+				width: calc(50% - 5px);
+				overflow-x: hidden;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.pool-basic-details{
+		flex-wrap: wrap;
+		row-gap: 10px;
+		.item{
+			&:nth-child(1){
+				width: calc(33% - 7px);
+			}
+			&:nth-child(2){
+				width: calc(36% - 7px);
+			}
+			&:nth-child(3){
+				width: calc(31% - 6px);
+			}
+			&:nth-child(4){
+				width: calc(57% - 5px);
+			}
+			&:nth-child(5){
+				width: calc(43% - 5px);
+			}
+		}
+	}
+}
+
 
 .full-bars{
 	display: flex;
@@ -610,6 +696,9 @@ body{
 	row-gap: 6px;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 767.98px) {
+		margin-top: 6px;
+	}
 	.key{
 		font-size: $fs-16;
 		color: $white-48;
@@ -722,6 +811,9 @@ body{
 	&.modal-lg{
 		.modal-dialog{
 			max-width: 350px;
+			@media (max-width: 767.98px) {
+				max-width: calc(100% - 32px);
+			}
 		}
 	}
 	&.show{

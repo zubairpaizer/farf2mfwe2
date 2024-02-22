@@ -59,7 +59,7 @@ export default function Farm() {
               </div>
             </div>
           </div>
-          <div className="basic-details">
+          <div className="basic-details farm-basic-details">
             <div className="item">
               <div class="gold-block">
                 <span>Current EPOCH</span>

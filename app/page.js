@@ -359,7 +359,7 @@ export default function Home() {
           </Link>
           <div className="table">
             <div className="table-header">
-              <div className="gold-block flex-1">
+              <div className="gold-block flex-1 sm-overflow-auto">
                 <span>Latest and Breaking news about memecoins</span>
               </div>
               <div className="d-flex items-center">
