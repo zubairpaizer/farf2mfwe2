@@ -115,7 +115,7 @@ export const PoolTabsCard = (props) => {
                   <div></div>
                   <div></div>
                 </div>
-                <img className="icon" src={successIcon.src} alt="" />
+                {/* <img className="icon" src={successIcon.src} alt="" /> */}
               </div>
               <h6 className="title">Verify your identity</h6>
               <p className="desc">Sign trx in you wallet. Transactions may take some time. You can close this window</p>

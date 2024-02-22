@@ -10,6 +10,7 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [ showWallet, setShowWallet ] = useState(false);
+  const [ showSearch, setShowSearch ] = useState(false);
 
   return (
     <main className="main">
@@ -22,9 +23,12 @@ export default function Home() {
           <div onClick={() => setShowWallet(!showWallet)} className="btn-default btn-lg">Connect Wallet</div>
         </div>
         <div className="box-body">
-          <div className="search-suggestions opened">
+          <div className={(showSearch ? 'opened ' : '') + "search-suggestions"}>
             <from>
-              <input className="field searchbar" type="search" placeholder="Search Pools" />
+              <input 
+                onFocus={() => setShowSearch(true)}
+                onBlur={() => setShowSearch(false)}
+                className="field searchbar" type="search" placeholder="Search Pools" />
             </from>
             <div className="suggestions">
               <div className="item">xUSD - STX</div>
@@ -37,13 +41,15 @@ export default function Home() {
                 <div className="gold-block flex-1">
                   <span>Pools</span>
                 </div>
-                <div className="gold-block">
-                  <span>Swap Markets: </span>
-                  <span>Bitcoin</span>
-                </div>
-                <div className="gold-block">
-                  <span>UTC </span>
-                  <span>18:45:12</span>
+                <div className="d-flex items-center">
+                  <div className="gold-block flex-1">
+                    <span>Swap Markets: </span>
+                    <span>Bitcoin</span>
+                  </div>
+                  <div className="gold-block">
+                    <span>UTC </span>
+                    <span>18:45:12</span>
+                  </div>
                 </div>
               </div>
               <div className="table-body">
@@ -196,13 +202,15 @@ export default function Home() {
                 <div className="gold-block flex-1">
                   <span>Farm</span>
                 </div>
-                <div className="gold-block">
-                  <span>Swap Markets: </span>
-                  <span>Bitcoin</span>
-                </div>
-                <div className="gold-block">
-                  <span>UTC </span>
-                  <span>18:45:12</span>
+                <div className="d-flex items-center">
+                  <div className="gold-block flex-1">
+                    <span>Swap Markets: </span>
+                    <span>Bitcoin</span>
+                  </div>
+                  <div className="gold-block">
+                    <span>UTC </span>
+                    <span>18:45:12</span>
+                  </div>
                 </div>
               </div>
               <div className="table-body">
@@ -354,22 +362,22 @@ export default function Home() {
               <div className="gold-block flex-1">
                 <span>Latest and Breaking news about memecoins</span>
               </div>
-              <div className="gold-block">
-                <span>Swap Markets: </span>
-                <span>Bitcoin</span>
-              </div>
-              <div className="gold-block">
-                <span>UTC </span>
-                <span>18:45:12</span>
+              <div className="d-flex items-center">
+                <div className="gold-block flex-1">
+                  <span>Swap Markets: </span>
+                  <span>Bitcoin</span>
+                </div>
+                <div className="gold-block">
+                  <span>UTC </span>
+                  <span>18:45:12</span>
+                </div>
               </div>
             </div>
             <div className="news">
               <div className="time">
                 <span>18:45</span>
               </div>
-              <div className="text flex-1">
-                <span>Bitcoin climbs the chart and makes its way up $1Tri Market cap</span>
-              </div>
+              <marquee className="text flex-1">Bitcoin climbs the chart and makes its way up $1Tri Market cap</marquee>
             </div>
           </div>
         </div>
