@@ -10,6 +10,7 @@ const PoolTabs = [
 
 export const PoolTabsCard = (props) => {
   const [ showTransaction, setShowTransaction ] = useState(false);
+  const [ showEditSlippage, setShowEditSlippage ] = useState(false);
   const [settings, setSettings] = useState({ tab: 'addLiquidity' });
 
   return (
@@ -51,7 +52,7 @@ export const PoolTabsCard = (props) => {
                 <span>Slippage</span>
                 <div className="d-flex items-center">
                   <span>04%</span>
-                  <div className="btn-edit">
+                  <div className="btn-edit" onClick={() => setShowEditSlippage(!showEditSlippage)}>
                     <img className="icon" src={editIcon.src} alt="" />
                     <span>EDIT</span>
                   </div>
@@ -63,7 +64,7 @@ export const PoolTabsCard = (props) => {
               </div>
             </div>
             <div className="text-end">
-              <div onClick={() => setShowTransaction(!showTransaction)} class="btn-default d-inline-flex">Add liquidity</div> 
+              <div class="btn-default d-inline-flex" onClick={() => setShowTransaction(!showTransaction)}>Add liquidity</div> 
             </div>
           </div>
         ) : (
@@ -92,12 +93,13 @@ export const PoolTabsCard = (props) => {
               </div>
             </div>
             <div className="text-end">
-              <div onClick={() => setShowTransaction(!showTransaction)} class="btn-default d-inline-flex">Remove liquidity</div> 
+              <div class="btn-default d-inline-flex" onClick={() => setShowTransaction(!showTransaction)}>Remove liquidity</div> 
             </div>
           </div>
         )}
       </div>
 
+      {/* Transaction Modal */}
       <div className={(showTransaction ? 'show ' : '') + "modal modal-lg modal-transaction"}>
         <div class="modal-dialog">
           <div class="modal-content">
@@ -125,6 +127,39 @@ export const PoolTabsCard = (props) => {
       </div>
 
       <div className={(showTransaction ? 'show ' : '') + "modal-backdrop"}></div>
+
+      {/* Slippage Modal */}
+      <div className={(showEditSlippage ? 'show ' : '') + "modal modal-lg modal-slippage"}>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Slippage</h5>
+              <button onClick={() => setShowEditSlippage(!showEditSlippage)} type="button" class="btn-close">
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <h6 className="title">Set Slippage</h6>
+                <p className="desc">Your transaction will revert if the price changes unfavourably by this percentage.</p>
+              </div>
+              <input className="value" type="text" placeholder="0.5%" />
+              <div class="slippage-percent">
+                <div className="item">0.5%</div>
+                <div className="item active">1%</div>
+                <div className="item">2%</div>
+                <div className="item">5%</div>
+                <div className="item">10%</div>
+              </div>
+              <div className="btn-container">
+                <div class="btn-default btn-lg" onClick={() => setShowEditSlippage(!showEditSlippage)}>Save Slippage</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={(showEditSlippage ? 'show ' : '') + "modal-backdrop"}></div>
 
     </>
   )
