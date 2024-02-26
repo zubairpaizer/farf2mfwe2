@@ -454,14 +454,6 @@ body{
 		align-items: stretch;
 		justify-content: space-between;
 		background-color: $dark-900;
-		.time{
-			display: flex;
-			align-items: center;
-			padding: 4px 8px;
-			font-size: $fs-14;
-			color: $primary;
-			box-shadow: -1px 0px 1px 0px #1F1F1F inset;
-		}
 		.text{
 			display: flex;
 			align-items: center;
@@ -469,6 +461,10 @@ body{
 			font-size: $fs-16;
 			color: $white-88;
 			box-shadow: 1px 0px 1px 0px #0A0A0A inset;
+			.time{
+				color: $primary;
+				margin-right: 10px;
+			}
 		}
 	}
 }

@@ -374,10 +374,10 @@ export default function Home() {
               </div>
             </div>
             <div className="news">
-              <div className="time">
-                <span>18:45</span>
-              </div>
-              <marquee className="text flex-1">Bitcoin climbs the chart and makes its way up $1Tri Market cap</marquee>
+              <marquee className="text flex-1">
+                <span className="time">18:45</span> 
+                Bitcoin climbs the chart and makes its way up $1Tri Market cap
+              </marquee>
             </div>
           </div>
         </div>
